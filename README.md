@@ -2,7 +2,7 @@
 
 Explainable AI-Powered Fraud Detection & Risk Management System
 
-FraudShield AI is an end-to-end machine learning system designed to detect suspicious financial transactions, calculate transaction risk, explain the reasons behind fraud predictions, and safely handle uncertain or incomplete transaction data.
+FraudShield AI is an end-to-end machine learning system designed to detect suspicious financial transactions, calculate transaction risk scores, explain the reasons behind fraud predictions, and safely handle uncertain or incomplete transaction data.
 
 The project combines Machine Learning, Risk Scoring, SHAP Explainability, Failure Handling, and an Interactive Streamlit Dashboard into one practical fraud detection solution.
 
@@ -27,26 +27,26 @@ FraudShield AI addresses these challenges using a combination of machine learnin
 FraudShield AI follows this workflow:
 
 Transaction Data
-       ↓
+↓
 Data Validation & Inspection
-       ↓
+↓
 Feature Engineering
-       ↓
+↓
 Machine Learning Model
-       ↓
+↓
 Fraud Probability
-       ↓
+↓
 Risk Scoring
-       ↓
+↓
 Risk Level
-       ↓
+↓
 Recommended Action
-       ↓
+↓
 SHAP Explanation
-       ↓
+↓
 Dashboard / Investigation
 
-The system produces three major risk categories:
+Risk Categories
 
 Risk Level| Recommended Action
 Low Risk| Approve
@@ -109,7 +109,7 @@ The evaluation highlights the trade-off between detecting fraudulent transaction
 
 FraudShield AI uses SHAP (SHapley Additive exPlanations) to understand which features contribute most to the model's fraud predictions.
 
-Top risk-related features identified by SHAP include:
+Top Risk-Related Features
 
 1. New Device
 2. Transaction Frequency
@@ -130,8 +130,9 @@ Each transaction receives a risk score from 0 to 100.
 
 The system converts the model prediction into practical risk categories:
 
-0 ───────────── 40 ───────────── 70 ───────────── 100
-     Low Risk          Medium Risk        High Risk
+0 ——————— 40 ——————— 70 ——————— 100
+
+Low Risk → Medium Risk → High Risk
 
 High-risk transactions can be sent for blocking or manual review, while medium-risk transactions can undergo additional verification.
 
@@ -141,14 +142,14 @@ High-risk transactions can be sent for blocking or manual review, while medium-r
 
 FraudShield AI does not make an automatic decision when required transaction information is missing.
 
-Example:
+Failure Handling Flow
 
 Required field missing
-        ↓
+↓
 Prediction stopped
-        ↓
+↓
 Transaction placed on hold
-        ↓
+↓
 Manual review
 
 This prevents the system from making unsafe decisions based on incomplete data.
@@ -157,7 +158,7 @@ This prevents the system from making unsafe decisions based on incomplete data.
 
 🖥️ Interactive Dashboard
 
-The project includes a Streamlit dashboard providing:
+The project includes an interactive Streamlit dashboard providing:
 
 - Transaction overview
 - Risk distribution
@@ -170,6 +171,18 @@ The project includes a Streamlit dashboard providing:
 - Transaction investigation
 - Risk score visualization
 - Safe failure audit information
+
+📊 Dashboard Overview
+
+"Dashboard Overview" (dashboard/dashboard-overview.png)
+
+🤖 Model Performance
+
+"Model Performance" (dashboard/dashboard-performance.png)
+
+🧠 Explainability & Investigation
+
+"Explainability" (dashboard/dashboard-explainability.png)
 
 ---
 
@@ -242,26 +255,26 @@ FraudShield-AI/
 
 ▶️ How to Run
 
-1. Clone the repository
+1. Clone the Repository
 
 git clone https://github.com/BhavyaSree-Tech/FraudShield-AI.git
 cd FraudShield-AI
 
-2. Create a virtual environment
+2. Create a Virtual Environment
 
 python -m venv venv
 
-3. Activate the environment
+3. Activate the Environment
 
 Windows:
 
 venv\Scripts\activate
 
-4. Install dependencies
+4. Install Dependencies
 
 pip install pandas numpy scikit-learn joblib shap streamlit
 
-5. Run the Streamlit dashboard
+5. Run the Streamlit Dashboard
 
 cd dashboard
 streamlit run app.py
@@ -286,7 +299,7 @@ The system can explain the risk using signals such as:
 - New device detected
 - High transaction frequency
 - Previous fraud history
-- Other behavioral or transaction-level signals
+- Other behavioral and transaction-level signals
 
 ---
 
@@ -294,12 +307,11 @@ The system can explain the risk using signals such as:
 
 The project includes an estimated false-positive cost analysis to demonstrate the business impact of incorrectly flagging legitimate transactions.
 
-Current project assumption:
+Current Project Assumption
 
-False Positives: 958
-Cost per False Positive: ₹100
-
-Estimated Impact: ₹95,800
+- False Positives: 958
+- Cost per False Positive: ₹100
+- Estimated Impact: ₹95,800
 
 This cost is a project assumption used for demonstration and can be replaced with a real business-specific cost model.
 
@@ -325,7 +337,7 @@ Future versions of FraudShield AI can include:
 
 🏆 Project Goal
 
-FraudShield AI demonstrates how machine learning + explainable AI + risk management + safe failure handling can be combined to create a practical fraud detection system.
+FraudShield AI demonstrates how Machine Learning + Explainable AI + Risk Management + Safe Failure Handling can be combined to create a practical fraud detection system.
 
 The goal is not only to predict fraud, but also to provide:
 
@@ -346,7 +358,7 @@ https://github.com/BhavyaSree-Tech
 
 Completed Prototype — Ready for Demonstration
 
-Core components implemented:
+Core Components Implemented
 
 - ✅ Dataset generation
 - ✅ Data inspection

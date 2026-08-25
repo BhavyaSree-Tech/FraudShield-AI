@@ -1,0 +1,3 @@
+test_case,status,risk_score,action,reason
+Normal transaction,SUCCESS,28.41,Approve,Prediction completed successfully
+Missing amount failure,MANUAL_REVIEW,,Hold transaction,Required transaction data is missing: amount

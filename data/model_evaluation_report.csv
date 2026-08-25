@@ -1,0 +1,13 @@
+metric,value
+threshold,0.5
+accuracy,0.8845
+precision,0.11786372007366483
+recall,0.39384615384615385
+f1_score,0.18143160878809356
+roc_auc,0.7316585967004573
+true_negatives,8717.0
+false_positives,958.0
+false_negatives,197.0
+true_positives,128.0
+cost_per_false_positive,100.0
+estimated_false_positive_cost,95800.0
